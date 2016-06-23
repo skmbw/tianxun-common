@@ -105,7 +105,7 @@ public class User implements IUserDetails {
     /**
      * 对应数据库表字段 user.regsiter_date
      */
-    private Date regsiterDate;
+    private Date registerDate;
 
     /**
      * 对应数据库表字段 user.age
@@ -346,21 +346,21 @@ public class User implements IUserDetails {
     }
 
     /**
-     * 获得字段 user.regsiter_date 的值
+     * 获得注册时间
      *
-     * @return the value of user.regsiter_date
+     * @return the value of user.register_date
      */
-    public Date getRegsiterDate() {
-        return regsiterDate;
+    public Date getRegisterDate() {
+        return registerDate;
     }
 
     /**
-     * 设置字段 user.regsiter_date 的值
+     * 设置注册时间
      *
-     * @param regsiterDate the value for user.regsiter_date
+     * @param registerDate the value for user.register_date
      */
-    public void setRegsiterDate(Date regsiterDate) {
-        this.regsiterDate = regsiterDate;
+    public void setRegisterDate(Date registerDate) {
+        this.registerDate = registerDate;
     }
 
     /**
