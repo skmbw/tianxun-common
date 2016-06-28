@@ -2,6 +2,10 @@ package com.vteba.tianxun.system.model;
 
 import java.util.Date;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Length;
+
 import com.alibaba.fastjson.annotation.JSONField;
 
 /**
@@ -45,26 +49,34 @@ public class Params {
     /**
      * 参数中文名
      */
+    @NotNull
+    @Length(min = 1, max = 200)
     private String name;
 
     /**
      * 参数代码，可以是zk路径
      */
+    @NotNull
+    @Length(min = 1, max = 200)
     private String code;
 
     /**
      * 参数值
      */
+    @NotNull
+    @Length(min = 1, max = 200)
     private String value;
 
     /**
      * 参数状态 0失效，1有效
      */
+    @NotNull
     private Integer state;
 
     /**
      * 描述
      */
+    @Length(min = 1, max = 200)
     private String remark;
 
     /**

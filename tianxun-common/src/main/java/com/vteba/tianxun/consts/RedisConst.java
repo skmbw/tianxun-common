@@ -21,4 +21,6 @@ public interface RedisConst {
     public static final String CATE_LIST = "a_category_tree_ls";
     /** 问题总数汇总键 */
     public static final String QCOUNT = "a_question_count_ct";
+    /** 系统参数缓存键前缀 */
+    public static final String PARAMS = "sys_params_p_";
 }
