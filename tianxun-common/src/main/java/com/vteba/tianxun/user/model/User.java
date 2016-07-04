@@ -38,8 +38,14 @@ public class User implements IUserDetails {
 	/** 个性签名 */
 	private String signature;
 	
-	/**职称*/
+	/** 职称 */
 	private String title;
+	
+	/** 被赞数 */
+	private Long loveNumber;
+	
+	/** 关注数 */
+	private Long focusNumber;
 	
     /**
      * order by 排序语句
@@ -760,4 +766,21 @@ public class User implements IUserDetails {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
+	public Long getLoveNumber() {
+		return loveNumber;
+	}
+
+	public void setLoveNumber(Long loveNumber) {
+		this.loveNumber = loveNumber;
+	}
+
+	public Long getFocusNumber() {
+		return focusNumber;
+	}
+
+	public void setFocusNumber(Long focusNumber) {
+		this.focusNumber = focusNumber;
+	}
+
 }
