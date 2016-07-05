@@ -10,9 +10,11 @@ public interface RedisConst {
 	public static final String IDX = "index_main_ls";
 	/** 首页天寻热文 */
     public static final String HOT = "index_hot_ls";
-     /** 首页名人堂 */
+    /** 首页侧边名人堂 */
     public static final String CELEBRITY = "index_celebrity_ls";
-     /** 首页热门标签 */
+    /** 全部名人堂 */
+    public static final String CELEBRITY_ALL = "index_celebrity_ls_all";
+    /** 首页热门标签 */
     public static final String TAGS = "index_tag_ls";
     /** 问题首页缓存 */
     public static final String QUES_IDX = "ques_index_cache_ls";
