@@ -1,5 +1,6 @@
 package com.vteba.tianxun.utils.solr;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -23,6 +24,8 @@ public class SolrUtils {
 	public static final String CONTENT = "mmseg_content";
 	public static final String VERSION = "_version_";
 	public static final String TYPE = "type";
+	public static final String DATE = "date_dt";
+	public static final String AUTHOR = "author";
 	
 	public static List<SolrBean> getBean(QueryResponse response) {
 		SolrDocumentList list = response.getResults();
@@ -35,11 +38,14 @@ public class SolrUtils {
 			bean.setSummary((String) map.get(SUMMARY));
 			bean.setCategory((String) map.get(CATEGORY));
 			bean.setContent((String) map.get(CONTENT));
+			bean.setAuthor((String) map.get(AUTHOR));
+			bean.setDate((Date) map.get(DATE));
+			bean.setVersion((Long) map.get(VERSION));
+			
 			Object type = map.get(TYPE);
 			if (type != null) {
 				bean.setType((int) type);
 			}
-			//bean.setVersion((long) map.get(VERSION));
 			result.add(bean);
 		}
 		return result;
