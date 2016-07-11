@@ -102,7 +102,7 @@ public class Article {
     private Date updateDate;
 
     /**
-     * 对应数据库表字段 article.state
+     * 文章状态，0正常、1禁用
      */
     private Integer state;
 
@@ -372,7 +372,7 @@ public class Article {
     }
 
     /**
-     * 获得字段 article.state 的值
+     * 获得文章状态，0正常、1禁用
      *
      * @return the value of article.state
      */
@@ -381,7 +381,7 @@ public class Article {
     }
 
     /**
-     * 设置字段 article.state 的值
+     * 设置文章状态，0正常、1禁用
      *
      * @param state the value for article.state
      */
