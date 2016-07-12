@@ -174,7 +174,7 @@ public class Question {
     /**鄙视数*/
     private Long despiseNumber;
     
-    /** 服务方式 */
+    /** 服务方式，1普通、2紧急（多收10元） */
     private Integer serviceType;
     
     /**
@@ -718,10 +718,18 @@ public class Question {
 		this.fee = fee;
 	}
 
+	/**
+	 * 服务方式，1普通、2紧急（多收10元）
+	 * @return
+	 */
 	public Integer getServiceType() {
 		return serviceType;
 	}
 
+	/**
+	 * 服务方式，1普通、2紧急（多收10元）
+	 * @param serviceType
+	 */
 	public void setServiceType(Integer serviceType) {
 		this.serviceType = serviceType;
 	}
