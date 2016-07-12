@@ -327,7 +327,7 @@ public class Article {
     }
 
     /**
-     * 设置字段 article.author_id 的值
+     * 设置作者
      *
      * @param authorId the value for article.author_id
      */
