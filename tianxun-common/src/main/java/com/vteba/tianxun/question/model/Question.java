@@ -417,7 +417,7 @@ public class Question {
      *
      * @return the value of question.solved
      */
-    public Boolean isSolved() {
+    public Boolean getSolved() {
         return solved;
     }
 
@@ -435,7 +435,7 @@ public class Question {
      *
      * @return the value of question.open
      */
-    public Boolean isOpen() {
+    public Boolean getOpen() {
         return open;
     }
 
@@ -726,7 +726,7 @@ public class Question {
 		this.serviceType = serviceType;
 	}
 
-	public Boolean isDeleted() {
+	public Boolean getDeleted() {
 		return deleted;
 	}
 

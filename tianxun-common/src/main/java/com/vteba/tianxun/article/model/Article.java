@@ -398,7 +398,7 @@ public class Article {
      *
      * @return the value of article.platform
      */
-    public Boolean isPlatform() {
+    public Boolean getPlatform() {
         return platform;
     }
 
@@ -416,7 +416,7 @@ public class Article {
      *
      * @return the value of article.open
      */
-    public Boolean isOpen() {
+    public Boolean getOpen() {
         return open;
     }
 
@@ -434,7 +434,7 @@ public class Article {
      *
      * @return the value of article.first_free
      */
-    public Boolean isFirstFree() {
+    public Boolean getFirstFree() {
         return firstFree;
     }
 
@@ -527,7 +527,7 @@ public class Article {
 		this.ids = ids;
 	}
 
-	public Boolean isDeleted() {
+	public Boolean getDeleted() {
 		return deleted;
 	}
 
