@@ -8,6 +8,12 @@ import com.vteba.annotation.Kryo;
 import com.vteba.annotation.Proto;
 import com.vteba.tianxun.answer.model.Answer;
 
+/**
+ * 问题实体类
+ * 
+ * @author iyinlei@126.com
+ * @date 2016年7月10日 上午10:52:17
+ */
 @Kryo
 @Proto
 public class Question {
@@ -110,14 +116,14 @@ public class Question {
     private Date closeDate;
 
     /**
-     * 对应数据库表字段 question.solved
+     * 问题是否被解决
      */
-    private Boolean solved;
+    private boolean solved;
 
     /**
-     * 对应数据库表字段 question.open
+     * 问题是否开放
      */
-    private Boolean open;
+    private boolean open;
 
     /**
      * 1向平台提问，2向网友
@@ -155,9 +161,9 @@ public class Question {
     private Integer state;
 
     /**
-     * 对应数据库表字段 question.full
+     * 问题是否被删除
      */
-    private Boolean full;
+    private boolean deleted;
     
     /**购买数*/
     private Long number;
@@ -407,7 +413,7 @@ public class Question {
      *
      * @return the value of question.solved
      */
-    public Boolean getSolved() {
+    public boolean isSolved() {
         return solved;
     }
 
@@ -416,7 +422,7 @@ public class Question {
      *
      * @param solved the value for question.solved
      */
-    public void setSolved(Boolean solved) {
+    public void setSolved(boolean solved) {
         this.solved = solved;
     }
 
@@ -425,7 +431,7 @@ public class Question {
      *
      * @return the value of question.open
      */
-    public Boolean getOpen() {
+    public boolean isOpen() {
         return open;
     }
 
@@ -434,7 +440,7 @@ public class Question {
      *
      * @param open the value for question.open
      */
-    public void setOpen(Boolean open) {
+    public void setOpen(boolean open) {
         this.open = open;
     }
 
@@ -562,24 +568,6 @@ public class Question {
      */
     public void setState(Integer state) {
         this.state = state;
-    }
-
-    /**
-     * 获得字段 question.full 的值
-     *
-     * @return the value of question.full
-     */
-    public Boolean getFull() {
-        return full;
-    }
-
-    /**
-     * 设置字段 question.full 的值
-     *
-     * @param full the value for question.full
-     */
-    public void setFull(Boolean full) {
-        this.full = full;
     }
 
 	public String getAuthCode() {
@@ -732,5 +720,13 @@ public class Question {
 	 */
 	public void setServiceType(Integer serviceType) {
 		this.serviceType = serviceType;
+	}
+
+	public boolean isDeleted() {
+		return deleted;
+	}
+
+	public void setDeleted(boolean deleted) {
+		this.deleted = deleted;
 	}
 }

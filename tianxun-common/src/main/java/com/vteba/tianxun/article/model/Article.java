@@ -107,24 +107,24 @@ public class Article {
     private Integer state;
 
     /**
-     * 对应数据库表字段 article.platform
+     * 是否平台文章，默认否
      */
-    private Boolean platform;
+    private boolean platform;
 
     /**
-     * 对应数据库表字段 article.open
+     * 文章是否开放，默认是
      */
-    private Boolean open;
+    private boolean open;
 
     /**
-     * 对应数据库表字段 article.full
+     * 文章是否被删除，默认否
      */
-    private Boolean full;
+    private boolean deleted;
 
     /**
-     * 对应数据库表字段 article.first_free
+     * 是否第一段免费，默认是
      */
-    private Boolean firstFree;
+    private boolean firstFree;
     
     /**
      * 文章价格
@@ -390,74 +390,56 @@ public class Article {
     }
 
     /**
-     * 获得字段 article.platform 的值
+     * 是否平台文章
      *
      * @return the value of article.platform
      */
-    public Boolean getPlatform() {
+    public boolean isPlatform() {
         return platform;
     }
 
     /**
-     * 设置字段 article.platform 的值
+     * 设置是否平台文章
      *
      * @param platform the value for article.platform
      */
-    public void setPlatform(Boolean platform) {
+    public void setPlatform(boolean platform) {
         this.platform = platform;
     }
 
     /**
-     * 获得字段 article.open 的值
+     * 获得文章是否开放
      *
      * @return the value of article.open
      */
-    public Boolean getOpen() {
+    public boolean isOpen() {
         return open;
     }
 
     /**
-     * 设置字段 article.open 的值
+     * 设置文章是否开放
      *
      * @param open the value for article.open
      */
-    public void setOpen(Boolean open) {
+    public void setOpen(boolean open) {
         this.open = open;
     }
 
     /**
-     * 获得字段 article.full 的值
-     *
-     * @return the value of article.full
-     */
-    public Boolean getFull() {
-        return full;
-    }
-
-    /**
-     * 设置字段 article.full 的值
-     *
-     * @param full the value for article.full
-     */
-    public void setFull(Boolean full) {
-        this.full = full;
-    }
-
-    /**
-     * 获得字段 article.first_free 的值
+     * 获得 是否第一段免费
      *
      * @return the value of article.first_free
      */
-    public Boolean getFirstFree() {
+    public boolean isFirstFree() {
         return firstFree;
     }
 
     /**
-     * 设置字段 article.first_free 的值
+     * 设置是否第一段免费
      *
      * @param firstFree the value for article.first_free
      */
-    public void setFirstFree(Boolean firstFree) {
+    public void setFirstFree(boolean firstFree) {
         this.firstFree = firstFree;
     }
 
@@ -539,5 +521,13 @@ public class Article {
 
 	public void setIds(String ids) {
 		this.ids = ids;
+	}
+
+	public boolean isDeleted() {
+		return deleted;
+	}
+
+	public void setDeleted(boolean deleted) {
+		this.deleted = deleted;
 	}
 }
