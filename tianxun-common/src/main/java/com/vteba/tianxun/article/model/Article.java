@@ -110,22 +110,22 @@ public class Article {
     /**
      * 是否平台文章，默认否
      */
-    private boolean platform;
+    private Boolean platform;
 
     /**
      * 文章是否开放，默认是
      */
-    private boolean open;
+    private Boolean open;
 
     /**
      * 文章是否被删除，默认否
      */
-    private boolean deleted;
+    private Boolean deleted;
 
     /**
      * 是否第一段免费，默认是
      */
-    private boolean firstFree;
+    private Boolean firstFree;
     
     /**
      * 文章价格
@@ -398,7 +398,7 @@ public class Article {
      *
      * @return the value of article.platform
      */
-    public boolean isPlatform() {
+    public Boolean isPlatform() {
         return platform;
     }
 
@@ -407,7 +407,7 @@ public class Article {
      *
      * @param platform the value for article.platform
      */
-    public void setPlatform(boolean platform) {
+    public void setPlatform(Boolean platform) {
         this.platform = platform;
     }
 
@@ -416,7 +416,7 @@ public class Article {
      *
      * @return the value of article.open
      */
-    public boolean isOpen() {
+    public Boolean isOpen() {
         return open;
     }
 
@@ -425,7 +425,7 @@ public class Article {
      *
      * @param open the value for article.open
      */
-    public void setOpen(boolean open) {
+    public void setOpen(Boolean open) {
         this.open = open;
     }
 
@@ -434,7 +434,7 @@ public class Article {
      *
      * @return the value of article.first_free
      */
-    public boolean isFirstFree() {
+    public Boolean isFirstFree() {
         return firstFree;
     }
 
@@ -443,7 +443,7 @@ public class Article {
      *
      * @param firstFree the value for article.first_free
      */
-    public void setFirstFree(boolean firstFree) {
+    public void setFirstFree(Boolean firstFree) {
         this.firstFree = firstFree;
     }
 
@@ -527,11 +527,11 @@ public class Article {
 		this.ids = ids;
 	}
 
-	public boolean isDeleted() {
+	public Boolean isDeleted() {
 		return deleted;
 	}
 
-	public void setDeleted(boolean deleted) {
+	public void setDeleted(Boolean deleted) {
 		this.deleted = deleted;
 	}
 

@@ -119,12 +119,12 @@ public class Question {
     /**
      * 问题是否被解决
      */
-    private boolean solved;
+    private Boolean solved;
 
     /**
      * 问题是否开放
      */
-    private boolean open;
+    private Boolean open;
 
     /**
      * 1向平台提问，2向网友
@@ -164,7 +164,7 @@ public class Question {
     /**
      * 问题是否被删除
      */
-    private boolean deleted;
+    private Boolean deleted;
     
     /**购买数*/
     private Long number;
@@ -417,7 +417,7 @@ public class Question {
      *
      * @return the value of question.solved
      */
-    public boolean isSolved() {
+    public Boolean isSolved() {
         return solved;
     }
 
@@ -426,7 +426,7 @@ public class Question {
      *
      * @param solved the value for question.solved
      */
-    public void setSolved(boolean solved) {
+    public void setSolved(Boolean solved) {
         this.solved = solved;
     }
 
@@ -435,7 +435,7 @@ public class Question {
      *
      * @return the value of question.open
      */
-    public boolean isOpen() {
+    public Boolean isOpen() {
         return open;
     }
 
@@ -444,7 +444,7 @@ public class Question {
      *
      * @param open the value for question.open
      */
-    public void setOpen(boolean open) {
+    public void setOpen(Boolean open) {
         this.open = open;
     }
 
@@ -726,11 +726,11 @@ public class Question {
 		this.serviceType = serviceType;
 	}
 
-	public boolean isDeleted() {
+	public Boolean isDeleted() {
 		return deleted;
 	}
 
-	public void setDeleted(boolean deleted) {
+	public void setDeleted(Boolean deleted) {
 		this.deleted = deleted;
 	}
 
