@@ -323,7 +323,7 @@ public class Question {
     }
 
     /**
-     * 获得字段 question.asker 的值
+     * 获得提问者，用户账户
      *
      * @return the value of question.asker
      */
@@ -332,7 +332,7 @@ public class Question {
     }
 
     /**
-     * 设置字段 question.asker 的值
+     * 设置提问者，用户账户account
      *
      * @param asker the value for question.asker
      */
@@ -341,7 +341,7 @@ public class Question {
     }
 
     /**
-     * 获得字段 question.asker_name 的值
+     * 获得提问者，用户昵称nickName
      *
      * @return the value of question.asker_name
      */
@@ -350,7 +350,7 @@ public class Question {
     }
 
     /**
-     * 设置字段 question.asker_name 的值
+     * 设置提问者昵称nickName
      *
      * @param askerName the value for question.asker_name
      */
