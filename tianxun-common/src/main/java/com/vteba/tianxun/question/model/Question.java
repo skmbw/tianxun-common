@@ -40,6 +40,7 @@ public class Question {
      * order by 排序语句
      * 对应数据库表字段 question
      */
+	@JSONField(serialize = false, deserialize = true)
     private String orderBy;
 
     /**
@@ -182,6 +183,9 @@ public class Question {
     
     /** 服务方式，1普通、2紧急（多收10元） */
     private Integer serviceType;
+    
+    /** 逻辑删除时间 */
+    private Date deleteDate;
     
     /**
      * 设置 order by 排序语句
@@ -728,5 +732,13 @@ public class Question {
 
 	public void setDeleted(boolean deleted) {
 		this.deleted = deleted;
+	}
+
+	public Date getDeleteDate() {
+		return deleteDate;
+	}
+
+	public void setDeleteDate(Date deleteDate) {
+		this.deleteDate = deleteDate;
 	}
 }

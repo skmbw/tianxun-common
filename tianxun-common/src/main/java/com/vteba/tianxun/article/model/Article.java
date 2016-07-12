@@ -31,6 +31,7 @@ public class Article {
      * order by 排序语句
      * 对应数据库表字段 article
      */
+	@JSONField(serialize = false, deserialize = true)
     private String orderBy;
 
     /**
@@ -145,6 +146,9 @@ public class Article {
     
     /**鄙视数*/
     private Long despiseNumber;
+    
+    /** 逻辑删除时间 */
+    private Date deleteDate;
 
     /**
      * 设置 order by 排序语句
@@ -529,5 +533,13 @@ public class Article {
 
 	public void setDeleted(boolean deleted) {
 		this.deleted = deleted;
+	}
+
+	public Date getDeleteDate() {
+		return deleteDate;
+	}
+
+	public void setDeleteDate(Date deleteDate) {
+		this.deleteDate = deleteDate;
 	}
 }
