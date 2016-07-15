@@ -36,7 +36,7 @@ public class Orders {
     private boolean distinct;
 
     /**
-     * 对应数据库表字段 orders.id
+     * 主键
      */
     private String id;
 
@@ -51,7 +51,7 @@ public class Orders {
     private Integer type;
 
     /**
-     * 对应数据库表字段 orders.create_date
+     * 订单创建时间
      */
     private Date createDate;
 
@@ -71,29 +71,39 @@ public class Orders {
     private Integer state;
 
     /**
-     * 对应数据库表字段 orders.buyer
+     * 买家用户id
      */
     private String buyer;
 
     /**
-     * 对应数据库表字段 orders.seller
+     * 卖家用户id
      */
     private String seller;
 
     /**
-     * 对应数据库表字段 orders.pay_channel
+     * 支付渠道
      */
     private String payChannel;
 
     /**
-     * 对应数据库表字段 orders.account
+     * 平台支付账户
      */
     private String account;
 
     /**
-     * 对应数据库表字段 orders.remark
+     * 订单描述
      */
     private String remark;
+    
+    /**
+     * 第三方订单号，如支付宝或者微信
+     */
+    private String tradeNo;
+    
+    /**
+     * 订单名称
+     */
+    private String subject;
 
     /**
      * 设置 order by 排序语句
@@ -231,7 +241,7 @@ public class Orders {
     }
 
     /**
-     * 获得字段 orders.pay_date 的值
+     * 获得支付时间
      *
      * @return the value of orders.pay_date
      */
@@ -240,7 +250,7 @@ public class Orders {
     }
 
     /**
-     * 设置字段 orders.pay_date 的值
+     * 设置支付时间
      *
      * @param payDate the value for orders.pay_date
      */
@@ -249,7 +259,7 @@ public class Orders {
     }
 
     /**
-     * 获得字段 orders.amount 的值
+     * 获得订单金额
      *
      * @return the value of orders.amount
      */
@@ -258,7 +268,7 @@ public class Orders {
     }
 
     /**
-     * 设置字段 orders.amount 的值
+     * 设置订单金额
      *
      * @param amount the value for orders.amount
      */
@@ -285,7 +295,7 @@ public class Orders {
     }
 
     /**
-     * 获得字段 orders.buyer 的值
+     * 获得买家用户id
      *
      * @return the value of orders.buyer
      */
@@ -294,7 +304,7 @@ public class Orders {
     }
 
     /**
-     * 设置字段 orders.buyer 的值
+     * 设置买家用户id
      *
      * @param buyer the value for orders.buyer
      */
@@ -303,7 +313,7 @@ public class Orders {
     }
 
     /**
-     * 获得字段 orders.seller 的值
+     * 获得卖家用户id
      *
      * @return the value of orders.seller
      */
@@ -312,7 +322,7 @@ public class Orders {
     }
 
     /**
-     * 设置字段 orders.seller 的值
+     * 设置卖家用户id
      *
      * @param seller the value for orders.seller
      */
@@ -321,7 +331,7 @@ public class Orders {
     }
 
     /**
-     * 获得字段 orders.pay_channel 的值
+     * 获得支付渠道
      *
      * @return the value of orders.pay_channel
      */
@@ -330,7 +340,7 @@ public class Orders {
     }
 
     /**
-     * 设置字段 orders.pay_channel 的值
+     * 设置支付渠道
      *
      * @param payChannel the value for orders.pay_channel
      */
@@ -339,7 +349,7 @@ public class Orders {
     }
 
     /**
-     * 获得字段 orders.account 的值
+     * 获得支付账户
      *
      * @return the value of orders.account
      */
@@ -348,7 +358,7 @@ public class Orders {
     }
 
     /**
-     * 设置字段 orders.account 的值
+     * 设置支付账户
      *
      * @param account the value for orders.account
      */
@@ -357,7 +367,7 @@ public class Orders {
     }
 
     /**
-     * 获得字段 orders.remark 的值
+     * 获得订单描述
      *
      * @return the value of orders.remark
      */
@@ -366,7 +376,7 @@ public class Orders {
     }
 
     /**
-     * 设置字段 orders.remark 的值
+     * 设置订单描述
      *
      * @param remark the value for orders.remark
      */
@@ -380,5 +390,37 @@ public class Orders {
 
 	public void setPage(int page) {
 		this.page = page;
+	}
+
+	/**
+	 * 获取第三方订单号
+	 * @return
+	 */
+	public String getTradeNo() {
+		return tradeNo;
+	}
+
+	/**
+	 * 设置第三方订单号
+	 * @param tradeNo
+	 */
+	public void setTradeNo(String tradeNo) {
+		this.tradeNo = tradeNo;
+	}
+
+	/**
+	 * 获取订单名称
+	 * @return
+	 */
+	public String getSubject() {
+		return subject;
+	}
+
+	/**
+	 * 设置订单名称
+	 * @param subject
+	 */
+	public void setSubject(String subject) {
+		this.subject = subject;
 	}
 }
