@@ -2,6 +2,8 @@ package com.vteba.tianxun.account.model;
 
 import java.util.Date;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 /**
  * 用户账户实体
  * 
@@ -25,12 +27,14 @@ public class Account {
      * 分页大小
      * 对应数据库表字段 account
      */
+    @JSONField(serialize = false, deserialize = false)
     private int pageSize = 10;
 
     /**
      * 是否去重
      * 对应数据库表字段 account
      */
+    @JSONField(serialize = false, deserialize = false)
     private boolean distinct;
 
     /**

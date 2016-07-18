@@ -2,6 +2,8 @@ package com.vteba.tianxun.account.model;
 
 import java.util.Date;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 /**
  * 平台账户明细实体，记录平台账户的变更记录
  * 
@@ -25,12 +27,14 @@ public class PlatformDetail {
      * 分页大小
      * 对应数据库表字段 platform_detail
      */
+    @JSONField(serialize = false, deserialize = false)
     private int pageSize = 10;
 
     /**
      * 是否去重
      * 对应数据库表字段 platform_detail
      */
+    @JSONField(serialize = false, deserialize = false)
     private boolean distinct;
 
     /**

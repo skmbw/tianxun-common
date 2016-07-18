@@ -1,5 +1,7 @@
 package com.vteba.tianxun.account.model;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 /**
  * 平台账户实体
  * 
@@ -23,12 +25,14 @@ public class PlatformAccount {
      * 分页大小
      * 对应数据库表字段 platform_account
      */
+    @JSONField(serialize = false, deserialize = false)
     private int pageSize = 10;
 
     /**
      * 是否去重
      * 对应数据库表字段 platform_account
      */
+    @JSONField(serialize = false, deserialize = false)
     private boolean distinct;
 
     /**
