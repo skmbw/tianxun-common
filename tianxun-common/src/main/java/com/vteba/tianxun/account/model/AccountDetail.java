@@ -38,34 +38,54 @@ public class AccountDetail {
     private boolean distinct;
 
     /**
-     * 对应数据库表字段 account_detail.id
+     * 主键
      */
     private String id;
 
     /**
-     * 对应数据库表字段 account_detail.user_id
+     * 用户id
      */
     private String userId;
 
     /**
-     * 对应数据库表字段 account_detail.account_id
+     * account表 账户id
      */
     private String accountId;
 
     /**
-     * 对应数据库表字段 account_detail.amount
+     * 金额
      */
     private Double amount;
 
     /**
-     * 对应数据库表字段 account_detail.category
+     * 业务分类，1充值2消费3收入
      */
     private Integer category;
 
     /**
-     * 对应数据库表字段 account_detail.operation_time
+     * 创建时间
      */
     private Date operationTime;
+    
+    /**
+     * 订单号
+     */
+    private String ordersId;
+    
+    /**
+     * 第三方订单号
+     */
+    private String tradeNo;
+    
+    /**
+     * 更新时间
+     */
+    private Date updateDate;
+    
+    /**
+     * 1正常，0作废，2待确认
+     */
+    private Integer state;
 
     /**
      * 设置 order by 排序语句
@@ -223,11 +243,52 @@ public class AccountDetail {
     }
 
     /**
-     * 设置字段 account_detail.operation_time 的值
+     * 设置操作时间
      *
      * @param operationTime the value for account_detail.operation_time
      */
     public void setOperationTime(Date operationTime) {
         this.operationTime = operationTime;
     }
+
+	public String getOrdersId() {
+		return ordersId;
+	}
+
+	/**
+	 * 设置订单号
+	 * @param ordersId
+	 */
+	public void setOrdersId(String ordersId) {
+		this.ordersId = ordersId;
+	}
+
+	/**
+	 * 获得第三方订单号
+	 * 
+	 * @return
+	 */
+	public String getTradeNo() {
+		return tradeNo;
+	}
+
+	public void setTradeNo(String tradeNo) {
+		this.tradeNo = tradeNo;
+	}
+
+	public Date getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
+
+	public Integer getState() {
+		return state;
+	}
+
+	public void setState(Integer state) {
+		this.state = state;
+	}
 }
