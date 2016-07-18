@@ -12,13 +12,17 @@
     <result column="amount" property="amount" jdbcType="DECIMAL" />
     <result column="category" property="category" jdbcType="INTEGER" />
     <result column="operation_time" property="operationTime" jdbcType="TIMESTAMP" />
+    <result column="orders_id" property="ordersId" jdbcType="VARCHAR" />
+    <result column="trade_no" property="tradeNo" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
     <!--
       WARNING - 该表所有字段。
       MyBatis代码工具自动生成，不要修改！
     -->
-    id, user_id, account_id, amount, category, operation_time
+    id, user_id, account_id, amount, category, operation_time, orders_id, trade_no, state, update_date
   </sql>
   <sql id="model_where_clause" >
     <!--
@@ -39,8 +43,14 @@
         <if test="category != null" >
           and category = #{category,jdbcType=INTEGER}
         </if>
-        <if test="operationTime != null" >
-          and operation_time = #{operationTime,jdbcType=TIMESTAMP}
+        <if test="ordersId != null" >
+          and orders_id = #{ordersId,jdbcType=VARCHAR}
+        </if>
+        <if test="tradeNo != null" >
+          and trade_no = #{tradeNo,jdbcType=VARCHAR}
+        </if>
+        <if test="state != null" >
+          and state = #{state,jdbcType=INTEGER}
         </if>
       </trim>
     </where>
@@ -58,6 +68,9 @@
     -->
     <where >
       <trim prefixOverrides="and" >
+      	<if test="params.id != null" >
+          and id = #{params.id,jdbcType=VARCHAR}
+        </if>
         <if test="params.userId != null" >
           and user_id = #{params.userId,jdbcType=VARCHAR}
         </if>
@@ -70,8 +83,14 @@
         <if test="params.category != null" >
           and category = #{params.category,jdbcType=INTEGER}
         </if>
-        <if test="params.operationTime != null" >
-          and operation_time = #{params.operationTime,jdbcType=TIMESTAMP}
+        <if test="params.ordersId != null" >
+          and orders_id = #{params.ordersId,jdbcType=VARCHAR}
+        </if>
+        <if test="params.tradeNo != null" >
+          and trade_no = #{params.tradeNo,jdbcType=VARCHAR}
+        </if>
+        <if test="params.state != null" >
+          and state = #{params.state,jdbcType=INTEGER}
         </if>
       </trim>
     </where>
@@ -200,6 +219,18 @@
       <if test="operationTime != null" >
         operation_time,
       </if>
+      <if test="ordersId != null" >
+        orders_id,
+      </if>
+      <if test="tradeNo != null" >
+        trade_no,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="updateDate != null" >
+        update_date,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -219,6 +250,18 @@
       </if>
       <if test="operationTime != null" >
         #{operationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ordersId != null" >
+        #{ordersId,jdbcType=VARCHAR},
+      </if>
+      <if test="tradeNo != null" >
+        #{tradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="updateDate != null" >
+        #{update_date,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -257,6 +300,18 @@
       <if test="record.operationTime != null" >
         operation_time = #{record.operationTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.ordersId != null" >
+        orders_id = #{record.ordersId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.tradeNo != null" >
+        trade_no = #{record.tradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.state != null" >
+        state = #{record.state,jdbcType=INTEGER},
+      </if>
+      <if test="record.updateDate != null" >
+        update_date = #{record.updateDate,jdbcType=TIMESTAMP},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="update_model_where_clause" />
@@ -283,6 +338,18 @@
       </if>
       <if test="operationTime != null" >
         operation_time = #{operationTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ordersId != null" >
+        orders_id = #{ordersId,jdbcType=VARCHAR},
+      </if>
+      <if test="tradeNo != null" >
+        trade_no = #{tradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null" >
+        state = #{state,jdbcType=INTEGER},
+      </if>
+      <if test="updateDate != null" >
+        update_date = #{updateDate,jdbcType=TIMESTAMP},
       </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}

@@ -68,6 +68,26 @@ public class PlatformDetail {
     private Date operationTime;
 
     /**
+     * 订单号
+     */
+    private String ordersId;
+    
+    /**
+     * 第三方订单号
+     */
+    private String tradeNo;
+    
+    /**
+     * 更新时间
+     */
+    private Date updateDate;
+    
+    /**
+     * 1正常，0作废，2待确认
+     */
+    private Integer state;
+    
+    /**
      * 设置 order by 排序语句
      */
     public void setOrderBy(String orderBy) {
@@ -230,4 +250,36 @@ public class PlatformDetail {
     public void setOperationTime(Date operationTime) {
         this.operationTime = operationTime;
     }
+
+	public String getOrdersId() {
+		return ordersId;
+	}
+
+	public void setOrdersId(String ordersId) {
+		this.ordersId = ordersId;
+	}
+
+	public String getTradeNo() {
+		return tradeNo;
+	}
+
+	public void setTradeNo(String tradeNo) {
+		this.tradeNo = tradeNo;
+	}
+
+	public Date getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
+
+	public Integer getState() {
+		return state;
+	}
+
+	public void setState(Integer state) {
+		this.state = state;
+	}
 }
