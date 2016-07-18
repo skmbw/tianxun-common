@@ -198,7 +198,7 @@ public class AccountDetail {
     }
 
     /**
-     * 获得字段 account_detail.amount 的值
+     * 获得金额
      *
      * @return the value of account_detail.amount
      */
@@ -207,7 +207,7 @@ public class AccountDetail {
     }
 
     /**
-     * 设置字段 account_detail.amount 的值
+     * 设置金额
      *
      * @param amount the value for account_detail.amount
      */
@@ -216,7 +216,7 @@ public class AccountDetail {
     }
 
     /**
-     * 获得字段 account_detail.category 的值
+     * 获得业务分类，1充值2消费3收入
      *
      * @return the value of account_detail.category
      */
@@ -225,7 +225,7 @@ public class AccountDetail {
     }
 
     /**
-     * 设置字段 account_detail.category 的值
+     * 设置业务分类，1充值2消费3收入
      *
      * @param category the value for account_detail.category
      */
@@ -234,7 +234,7 @@ public class AccountDetail {
     }
 
     /**
-     * 获得字段 account_detail.operation_time 的值
+     * 获得操作时间
      *
      * @return the value of account_detail.operation_time
      */
@@ -272,6 +272,10 @@ public class AccountDetail {
 		return tradeNo;
 	}
 
+	/**
+	 * 设置第三方订单号
+	 * @param tradeNo
+	 */
 	public void setTradeNo(String tradeNo) {
 		this.tradeNo = tradeNo;
 	}
@@ -280,14 +284,26 @@ public class AccountDetail {
 		return updateDate;
 	}
 
+	/**
+	 * 设置更新时间，账户明细记录状态确认时间
+	 * @param updateDate
+	 */
 	public void setUpdateDate(Date updateDate) {
 		this.updateDate = updateDate;
 	}
 
+	/**
+	 * 获得账户明细记录状态，1正常，0作废，2待确认
+	 * @return
+	 */
 	public Integer getState() {
 		return state;
 	}
 
+	/**
+	 * 设置账户明细记录状态，1正常，0作废，2待确认
+	 * @param state
+	 */
 	public void setState(Integer state) {
 		this.state = state;
 	}
