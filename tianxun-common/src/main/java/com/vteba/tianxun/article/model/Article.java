@@ -385,7 +385,7 @@ public class Article {
     }
 
     /**
-     * 设置文章状态，0正常、1禁用
+     * 设置文章状态，1正常、0禁用
      *
      * @param state the value for article.state
      */
