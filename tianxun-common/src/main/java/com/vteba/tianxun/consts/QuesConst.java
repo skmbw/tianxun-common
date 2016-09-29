@@ -8,5 +8,5 @@ package com.vteba.tianxun.consts;
 public interface QuesConst {
 
 	/** 问题图片附件保存路径前缀 */
-	public static final String QIMAGE_PATH = "img/question/";
+	public static final String IMAGE_PATH = "img/question/";
 }

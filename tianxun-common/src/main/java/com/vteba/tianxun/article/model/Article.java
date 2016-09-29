@@ -25,7 +25,7 @@ public class Article {
 	private String content;
 	
 	/** 上传的图片的id */
-	private String ids;
+	private String[] ids;
 	
     /**
      * order by 排序语句
@@ -519,11 +519,11 @@ public class Article {
 		this.despiseNumber = despiseNumber;
 	}
 
-	public String getIds() {
+	public String[] getIds() {
 		return ids;
 	}
 
-	public void setIds(String ids) {
+	public void setIds(String[] ids) {
 		this.ids = ids;
 	}
 
