@@ -4,6 +4,9 @@ public interface MQConst {
 	/** 用户Topic */
 	public static final String USER = "User";
 	
+	/** 积分Topic */
+	public static final String SCORE = "score";
+	
 	/** 用户注册tag */
 	public static final String TAG_REG = "Regist";
 	
