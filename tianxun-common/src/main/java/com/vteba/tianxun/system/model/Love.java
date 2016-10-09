@@ -81,6 +81,10 @@ public class Love {
 		this.despiseNumber = despiseNumber;
 	}
 
+	/**
+	 * 获取操作对象id
+	 * @return 操作对象id
+	 */
 	public String getId() {
 		return id;
 	}
