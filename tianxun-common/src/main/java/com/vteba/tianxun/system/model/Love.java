@@ -7,7 +7,7 @@ package com.vteba.tianxun.system.model;
  */
 public class Love {
 
-	public static final String PREFIX = "LOVEZ_";
+	public static final String PREFIX = "LOVEZ_BISHI_GUAN";
 	
 	/**操作对象类型 1文章2问题3答案4标签*/
 	private int type;
